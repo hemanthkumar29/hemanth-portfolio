@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY || "");
-
 export async function POST(req: Request) {
   const formData = await req.formData();
   const name = (formData.get("name") as string) || "";
@@ -14,9 +12,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Missing fields" }, { status: 400 });
   }
 
-  if (!process.env.RESEND_API_KEY) {
+  const apiKey = process.env.RESEND_API_KEY;
+
+  if (!apiKey) {
     return NextResponse.json({ ok: true, note: "RESEND_API_KEY not set. Configure to send emails." });
   }
+
+  const resend = new Resend(apiKey);
 
   await resend.emails.send({
     from: "portfolio@hemanth.dev",
