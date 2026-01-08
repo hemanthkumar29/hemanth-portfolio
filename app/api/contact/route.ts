@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     from: "portfolio@hemanth.dev",
     to: ["hemanth@example.com"],
     subject: `[Portfolio] ${subject}`,
-    reply_to: email,
+    replyTo: email,
     text: `From: ${name} <${email}>\n\n${message}`,
   });
 
