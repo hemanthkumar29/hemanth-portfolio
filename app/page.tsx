@@ -16,7 +16,7 @@ export default function Home() {
   const [commandOpen, setCommandOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar onCommandOpen={() => setCommandOpen(true)} />
       <main className="space-y-12 sm:space-y-16">
         <Hero />

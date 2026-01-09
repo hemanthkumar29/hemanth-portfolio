@@ -15,25 +15,25 @@ export function About() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.4 }}
-        className="grid gap-4 rounded-3xl border border-white/10 bg-card/70 p-6 text-foreground/80 shadow-soft md:grid-cols-2"
+        className="grid gap-4 rounded-3xl border border-white/10 bg-card/80 p-6 text-foreground/80 shadow-soft md:grid-cols-2"
       >
         <div className="space-y-3">
           <p>
-            I explore DevOps and cloud fundamentals to make shipping faster and safer. I enjoy
-            designing systems that balance simplicity with resilience, and I document everything as I
-            learn.
+            I blend electrical engineering with software, AI, and quantum ideas—shipping things to
+            learn faster. I like systems that balance simplicity with rigor and leave behind notes so
+            teams can move together.
           </p>
           <p>
-            Beyond code, I volunteer with NSS, lead teams for on-ground initiatives, and bring that
-            collaboration mindset to hackathons and product builds.
+            Beyond code, I volunteer with NSS, market energy-efficient builds on campus, and bring
+            that collaborative mindset to hackathons.
           </p>
         </div>
         <div className="space-y-3 rounded-2xl border border-white/10 bg-white/5 p-4">
           <p className="text-sm uppercase tracking-[0.25em] text-white/60">Focus</p>
           <ul className="space-y-2 text-foreground/90">
-            <li>Cloud basics → infra as code, observability, secure deployments</li>
-            <li>Backend craft → clean APIs, queues, caching, testing</li>
-            <li>Interfaces that feel intentional and fast</li>
+            <li>Quantum + ML experiments for smarter detection systems</li>
+            <li>Backend craft → clean APIs, data pipelines, testing, and caching</li>
+            <li>Interfaces that feel intentional, responsive, and bold</li>
           </ul>
         </div>
       </motion.div>

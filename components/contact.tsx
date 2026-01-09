@@ -39,7 +39,7 @@ export function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.35 }}
-        className="relative grid gap-4 rounded-3xl border border-white/10 bg-card/80 p-6 shadow-soft md:grid-cols-2"
+        className="relative grid gap-4 rounded-3xl border border-white/10 bg-card/90 p-6 shadow-soft md:grid-cols-2"
       >
         <div className="space-y-4">
           <Input name="name" placeholder="Name" required />
@@ -66,8 +66,8 @@ export function Contact() {
             </AnimatePresence>
           </div>
           <p className="text-sm text-foreground/60">
-            Email routes to /api/contact (configure Resend or EmailJS). Keep responses concise and
-            include context.
+            Direct line: hemanthkumarhk100@gmail.com. API is wired to /api/contact—configure your
+            email provider (Resend/EmailJS) before deploying.
           </p>
         </div>
       </motion.form>

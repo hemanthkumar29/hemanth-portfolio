@@ -14,13 +14,13 @@ const config: Config = {
     },
     extend: {
       colors: {
-        background: "#04060a",
-        foreground: "#e5e7eb",
+        background: "#030712",
+        foreground: "#e8f0ff",
         muted: "#0b1220",
-        accent: "#7c7dff",
-        accent2: "#1f9cff",
-        card: "#0b0f1a",
-        border: "rgba(255,255,255,0.08)",
+        accent: "#2ad2ff",
+        accent2: "#7af59c",
+        card: "#0a0f1e",
+        border: "rgba(255,255,255,0.09)",
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
@@ -28,7 +28,7 @@ const config: Config = {
         mono: ["var(--font-mono)", ...fontFamily.mono],
       },
       boxShadow: {
-        soft: "0 15px 45px rgba(0,0,0,0.25)",
+        soft: "0 20px 55px rgba(0,0,0,0.35)",
       },
       backgroundImage: {
         "grid":

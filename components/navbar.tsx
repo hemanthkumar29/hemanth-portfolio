@@ -23,7 +23,7 @@ export function Navbar({ onCommandOpen }: NavbarProps) {
   return (
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
-        scrolled ? "backdrop-blur-xl bg-black/50 border-b border-white/10" : "bg-transparent"
+        scrolled ? "backdrop-blur-xl bg-background/80 border-b border-white/10" : "bg-transparent"
       }`}
     >
       <div className="container flex items-center justify-between py-4">

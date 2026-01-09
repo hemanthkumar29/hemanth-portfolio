@@ -1,123 +1,117 @@
 export const personal = {
   name: "Hemanth Kumar",
-  headline: "Aspiring Software Developer | DevOps & Cloud Enthusiast",
-  location: "India",
+  headline: "B.Tech EEE • AI, Quantum & Full-stack Engineer",
+  location: "Visakhapatnam",
   summary:
-    "18 y/o B.Tech (EEE) student at Lendi Institute, building reliable systems, modern web apps, and automation pipelines. Passionate about Linux, cloud fundamentals, and pragmatic engineering.",
+    "Enthusiastic undergrad blending electrical engineering with software, AI, and quantum computing to build intelligent, reliable systems.",
   story:
-    "Curious engineer who learns by shipping. From NSS volunteering to hackathons, I gravitate to backend reliability, clean interfaces, and end-to-end ownership. Currently exploring production-grade CI/CD, infra-as-code, and secure APIs while strengthening data structures and algorithms.",
+    "Goal-driven builder who learns by shipping. From hackathons to NSS service, I mix analytical thinking with hands-on delivery—spanning quantum-enhanced ML, backend APIs, and smooth web experiences. I document what I learn and look for teams that value speed with rigor.",
   contact: {
-    email: "hemanth@example.com",
-    github: "https://github.com/your-github",
-    linkedin: "https://www.linkedin.com/in/your-linkedin",
+    email: "hemanthkumarhk100@gmail.com",
+    github: "https://github.com/hemanthkumar29",
+    linkedin: "https://www.linkedin.com/in/hemanthkumar-ch/",
   },
-  resumeUrl: "https://example.com/resume.pdf",
+  resumeUrl: "/resume.pdf",
 };
 
 export const skills = [
   {
-    title: "DevOps & Cloud",
-    items: ["Linux", "Docker", "Git & GitHub", "CI/CD (GitHub Actions)", "AWS | Azure | GCP fundamentals", "Monitoring basics"],
+    title: "AI, Data & Quantum",
+    items: ["Machine Learning", "NLP basics", "Computer Vision", "TensorFlow", "OpenCV", "Qiskit", "Reinforcement Learning"],
   },
   {
-    title: "Programming",
-    items: ["TypeScript", "Node.js", "Next.js", "Python", "C", "Data Structures & Algorithms"],
+    title: "Backend & Systems",
+    items: ["Node.js", "Express.js", "Flask", "APIs", "Caching & Queues", "Data Structures & Algorithms"],
+  },
+  {
+    title: "Frontend & Mobile",
+    items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Flutter", "UI Systems"],
+  },
+  {
+    title: "Cloud & DevOps",
+    items: ["Linux", "Git & GitHub", "Firebase", "Google Cloud", "CI/CD", "Docker (basics)"]
+  },
+  {
+    title: "Programming Languages",
+    items: ["Python", "C", "C++", "JavaScript", "SQL"]
   },
   {
     title: "Tools",
-    items: ["Vercel", "PostgreSQL", "Prisma", "Redis", "NGINX", "Figma"],
-  },
-  {
-    title: "AI / ML",
-    items: ["OpenCV", "PyTorch basics", "TensorFlow basics", "ML pipelines", "Prompt design"],
+    items: ["VS Code", "PyCharm", "MongoDB", "Postman", "Google Colab", "Canva"]
   },
 ];
 
 export const projects = [
   {
+    title: "Quantum Rush – Hybrid Fraud Detection",
+    description:
+      "Hybrid quantum-classical pipeline using a 17-qubit variational circuit and actor-critic RL for financial fraud detection.",
+    stack: ["Python", "Qiskit", "Reinforcement Learning", "PaySim Dataset"],
+    github: "",
+    demo: "",
+    impact: "Boosted detection accuracy with superposition-based encoding and on-policy updates.",
+  },
+  {
+    title: "Power Quality Analyzer",
+    description:
+      "ML-based analysis of voltage and current waveforms to classify sag, swell, interruptions, and harmonics.",
+    stack: ["Python", "NumPy", "Pandas", "Scikit-learn", "FFT"],
+    github: "",
+    demo: "",
+    impact: "High detection accuracy using FFT feature extraction on real-world datasets.",
+  },
+  {
     title: "Conversational Image Recognition Chatbot",
     description:
-      "Chat interface that accepts images, runs vision inference, and streams contextual responses.",
-    stack: ["Next.js", "TypeScript", "Vision API", "Vector DB"],
-    github: "https://github.com/your-github/image-chatbot",
-    demo: "https://demo.example.com/image-chatbot",
-    impact: "Reduced response latency to sub-1.2s with streaming and caching.",
-  },
-  {
-    title: "Deepfake Face-Swap Detection System",
-    description: "ML pipeline to flag manipulated media using frequency and artifact analysis.",
-    stack: ["Python", "PyTorch", "FastAPI", "Docker"],
-    github: "https://github.com/your-github/deepfake-detection",
+      "AI chatbot combining CNN-based image understanding with Transformer NLP, served via Flask for web access.",
+    stack: ["Python", "TensorFlow", "OpenCV", "NLP", "Flask"],
+    github: "",
     demo: "",
-    impact: ">92% precision on curated benchmark; containerized for edge inference.",
+    impact: "Unified vision and language responses with a scalable backend.",
   },
   {
-    title: "Women Safety Analytics (Real-time threat detection)",
+    title: "EEE Hub – Department Resource Website",
     description:
-      "Real-time stream processing to detect anomalies, trigger alerts, and surface geospatial dashboards.",
-    stack: ["Node.js", "WebSockets", "OpenCV", "PostgreSQL"],
-    github: "https://github.com/your-github/women-safety-analytics",
+      "Academic hub for EEE students with structured topics, smooth animations, and streamlined navigation.",
+    stack: ["HTML", "CSS", "JavaScript", "Firebase"],
+    github: "",
     demo: "",
-    impact: "Latency <800ms from detection to alert dispatch in tests.",
-  },
-  {
-    title: "Geolocation Attendance Tracker",
-    description: "Location-aware attendance with spoofing defenses and audit trails.",
-    stack: ["Next.js", "PostgreSQL", "Clerk", "Map APIs"],
-    github: "https://github.com/your-github/geolocation-attendance",
-    demo: "",
-    impact: "Cut manual reconciliation time by 60% via automated logs.",
-  },
-  {
-    title: "Alumni Association Platform (Web + Mobile)",
-    description: "Community hub with mentorship matching, events, and announcements.",
-    stack: ["Next.js", "React Native", "Supabase", "Tailwind"],
-    github: "https://github.com/your-github/alumni-platform",
-    demo: "",
-    impact: "Onboarded 200+ alumni in pilot; shipped responsive design system.",
-  },
-  {
-    title: "Career Path Recommendation",
-    description: "Recommender that maps strengths to learning roadmaps with curated resources.",
-    stack: ["Next.js", "TypeScript", "OpenAI", "Supabase"],
-    github: "https://github.com/your-github/career-path-recommender",
-    demo: "",
-    impact: "Generated personalized tracks in <5s with cached embeddings.",
-  },
-  {
-    title: "EEE Hub – Academic Resource Portal",
-    description: "Centralized notes, labs, and exam prep utilities for EEE students.",
-    stack: ["Next.js", "TypeScript", "Tailwind", "Redis cache"],
-    github: "https://github.com/your-github/eee-hub",
-    demo: "",
-    impact: "500+ monthly visits; improved navigation with semantic search.",
+    impact: "Improved access to notes and units with organized content delivery.",
   },
 ];
 
 export const experiences = [
   {
-    title: "NSS Volunteer",
-    timeline: "Ongoing",
+    title: "NSS Volunteer — Lendi Institute",
+    timeline: "2024 – Present",
     bullets: [
-      "Led community initiatives, coordinated student teams, and ran logistics under tight timelines.",
-      "Documented activities and outcomes with clear reports and stakeholder updates.",
+      "Drive community welfare initiatives and logistics with student teams.",
+      "Document outcomes and maintain clear stakeholder updates.",
     ],
   },
   {
-    title: "Hackathons & College Tech Events",
-    timeline: "2023 - Present",
+    title: "Energy Conservation Club — Lendi Institute",
+    timeline: "2024 – Present",
     bullets: [
-      "Built rapid prototypes with small teams: realtime dashboards, ML demos, and API-first backends.",
-      "Optimized CI/CD for submission pipelines and streamlined deployments to Vercel.",
+      "Marketed energy-efficient LED bulbs built by the EEE department.",
+      "Ran awareness drives on sustainable energy practices across campus.",
+    ],
+  },
+  {
+    title: "Hackathons & Workshops",
+    timeline: "2023 – Present",
+    bullets: [
+      "Participated in national/regional hackathons including IEEE Xtreme 18.0/19.0.",
+      "Built prototypes around AI, IoT, and cloud; collaborated with interdisciplinary teams.",
     ],
   },
 ];
 
 export const certifications = [
-  "NPTEL: Cloud Computing",
-  "NPTEL: DevOps Foundations",
-  "Linux, Git, Docker self-learning sprints",
-  "Hands-on CI/CD with GitHub Actions",
+  "Mastering Data Structures and Algorithms – Udemy",
+  "Introduction to Machine Learning – Coursera",
+  "Complete Web Development Bootcamp – Udemy",
+  "Quantum Computing Fundamentals – IBM Qiskit",
 ];
 
 export const navLinks = [

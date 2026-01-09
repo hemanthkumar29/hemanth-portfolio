@@ -7,10 +7,11 @@
 }
 
 body {
-  background: radial-gradient(circle at 20% 20%, rgba(124, 125, 255, 0.14), transparent 26%),
-    radial-gradient(circle at 80% 0%, rgba(31, 156, 255, 0.16), transparent 28%),
-    #04060a;
-  color: #e5e7eb;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(42, 210, 255, 0.16), transparent 32%),
+    radial-gradient(circle at 78% 8%, rgba(122, 245, 156, 0.12), transparent 30%),
+    linear-gradient(135deg, #050915 0%, #030712 40%, #040c1d 100%);
+  color: #e8f0ff;
   min-height: 100vh;
   position: relative;
 }
@@ -19,13 +20,13 @@ body {
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
     linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 32px 32px, 32px 32px;
-  mask-image: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.65), transparent 70%);
+  mask-image: radial-gradient(circle at 50% 40%, rgba(0, 0, 0, 0.8), transparent 72%);
 }
 
 .glass {
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(18px) saturate(120%);
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .gradient-border {
@@ -38,7 +39,7 @@ body {
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(120deg, rgba(124, 125, 255, 0.8), rgba(31, 156, 255, 0.55), rgba(124, 125, 255, 0.8));
+  background: linear-gradient(120deg, rgba(42, 210, 255, 0.9), rgba(122, 245, 156, 0.8), rgba(42, 210, 255, 0.9));
   -webkit-mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -46,12 +47,16 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(120deg, #c7d2fe, #7c7dff, #34d8ff);
+  background: linear-gradient(120deg, #9ce7ff, #2ad2ff, #7af59c);
   -webkit-background-clip: text;
   color: transparent;
 }
 
+.shadow-soft {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.38);
+}
+
 ::selection {
-  background: rgba(124, 125, 255, 0.35);
-  color: #f8fafc;
+  background: rgba(42, 210, 255, 0.28);
+  color: #f8fbff;
 }
