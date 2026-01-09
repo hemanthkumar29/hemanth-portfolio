@@ -54,7 +54,7 @@ export function Navbar({ onCommandOpen }: NavbarProps) {
             size="sm"
             className="hidden sm:inline-flex"
           >
-            <Link href={personal.resumeUrl} target="_blank" className="gap-2">
+            <Link href={personal.resumeUrl} target="_blank" rel="noopener" download className="gap-2">
               <Download className="h-4 w-4" /> Resume
             </Link>
           </Button>

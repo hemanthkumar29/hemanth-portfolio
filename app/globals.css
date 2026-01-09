@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
   position: relative;
   scroll-behavior: smooth;
+  font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 .backdrop-grid {
@@ -51,6 +52,11 @@ body {
   background: linear-gradient(120deg, #9ce7ff, #2ad2ff, #7af59c);
   -webkit-background-clip: text;
   color: transparent;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), var(--font-sans), "Inter", system-ui, sans-serif;
+  letter-spacing: -0.01em;
 }
 
 .shadow-soft {

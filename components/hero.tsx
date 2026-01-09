@@ -1,17 +1,25 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { personal } from "@/data/portfolio";
 import Link from "next/link";
 import { ArrowUpRight, Github, Linkedin } from "lucide-react";
 
 export function Hero() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
+  const glowY = useTransform(scrollYProgress, [0, 1], [0, -80]);
+  const glowX = useTransform(scrollYProgress, [0, 1], [0, 40]);
+  const bubbleY = useTransform(scrollYProgress, [0, 1], [0, -30]);
+
   return (
-    <section id="hero" className="relative overflow-hidden pb-12 pt-20 sm:pt-28">
+    <section ref={sectionRef} id="hero" className="relative overflow-hidden pb-12 pt-20 sm:pt-28">
       <div className="pointer-events-none absolute inset-0 -z-10">
         <motion.div
           className="absolute inset-x-10 top-8 h-64 rounded-full bg-gradient-to-r from-accent/25 via-accent2/20 to-accent/25 blur-[100px]"
+          style={{ y: glowY, x: glowX }}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -44,7 +52,7 @@ export function Hero() {
               </Link>
             </Button>
             <Button asChild variant="ghost" size="lg" className="gap-2">
-              <Link href={personal.resumeUrl} target="_blank">
+              <Link href={personal.resumeUrl} target="_blank" rel="noopener" download>
                 Download Resume
               </Link>
             </Button>
@@ -72,11 +80,13 @@ export function Hero() {
         >
           <motion.div
             className="absolute -left-10 -top-6 h-28 w-28 rounded-full bg-accent/25 blur-3xl"
+            style={{ y: bubbleY }}
             animate={{ y: [0, 8, 0], x: [0, -6, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.div
             className="absolute -right-12 bottom-0 h-32 w-32 rounded-full bg-accent2/25 blur-3xl"
+            style={{ y: bubbleY }}
             animate={{ y: [0, -10, 0], x: [0, 8, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
           />

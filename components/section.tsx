@@ -1,5 +1,7 @@
-import { ReactNode } from "react";
-import { motion } from "framer-motion";
+"use client";
+
+import { ReactNode, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 interface SectionProps {
   id: string;
@@ -10,14 +12,20 @@ interface SectionProps {
 }
 
 export function Section({ id, eyebrow, title, description, children }: SectionProps) {
+  const ref = useRef<HTMLElement | null>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
+  const headingY = useTransform(scrollYProgress, [0, 1], [0, -60]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, -30]);
+
   return (
-    <section id={id} className="py-16 sm:py-20">
+    <section id={id} ref={ref} className="py-16 sm:py-20">
       <div className="container space-y-10">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.4 }}
+          style={{ y: headingY }}
           className="max-w-3xl space-y-3"
         >
           {eyebrow ? (
@@ -28,7 +36,9 @@ export function Section({ id, eyebrow, title, description, children }: SectionPr
             <p className="text-lg text-foreground/75 leading-relaxed">{description}</p>
           ) : null}
         </motion.div>
-        {children}
+        <motion.div style={{ y: contentY }}>
+          {children}
+        </motion.div>
       </div>
     </section>
   );

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Sora, JetBrains_Mono } from "next/font/google";
+import { Manrope, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Space_Grotesk({ subsets: ["latin"], variable: "--font-sans" });
-const poppins = Sora({
+const inter = Manrope({ subsets: ["latin"], variable: "--font-sans" });
+const poppins = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-display",
 });
 const jetbrains = JetBrains_Mono({
@@ -59,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${poppins.variable} ${jetbrains.variable} bg-background text-foreground antialiased`}
+        className={`${inter.variable} ${poppins.variable} ${jetbrains.variable} bg-background text-foreground antialiased font-sans`}
       >
         <div className="pointer-events-none fixed inset-0 -z-10 opacity-60 backdrop-grid" />
         {children}
