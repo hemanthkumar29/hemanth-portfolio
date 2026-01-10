@@ -17,8 +17,14 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <a
+        href="#hero"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent focus:text-white focus:rounded-md"
+      >
+        Skip to main content
+      </a>
       <Navbar onCommandOpen={() => setCommandOpen(true)} />
-      <main className="space-y-12 sm:space-y-16">
+      <main id="main-content" role="main" className="space-y-12 sm:space-y-16">
         <Hero />
         <About />
         <Skills />

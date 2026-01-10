@@ -15,7 +15,14 @@ export function Hero() {
   const bubbleY = useTransform(scrollYProgress, [0, 1], [0, -30]);
 
   return (
-    <section ref={sectionRef} id="hero" className="relative overflow-hidden pb-12 pt-20 sm:pt-28">
+    <section
+      ref={sectionRef}
+      id="hero"
+      className="relative overflow-hidden pb-12 pt-20 sm:pt-28"
+      aria-label="Introduction"
+      itemScope
+      itemType="https://schema.org/Person"
+    >
       <div className="pointer-events-none absolute inset-0 -z-10">
         <motion.div
           className="absolute inset-x-10 top-8 h-64 rounded-full bg-gradient-to-r from-accent/25 via-accent2/20 to-accent/25 blur-[100px]"
@@ -37,12 +44,12 @@ export function Hero() {
             <span className="text-foreground/60">EEE @ Lendi Institute</span>
           </div>
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-            Hi, I’m <span className="text-gradient">{personal.name}</span>
+            Hi, I'm <span className="text-gradient" itemProp="name">{personal.name}</span>
           </h1>
-          <p className="text-lg text-foreground/80 sm:text-xl">
+          <p className="text-lg text-foreground/80 sm:text-xl" itemProp="jobTitle">
             {personal.headline}
           </p>
-          <p className="text-foreground/75 leading-relaxed">
+          <p className="text-foreground/75 leading-relaxed" itemProp="description">
             {personal.summary}
           </p>
           <div className="flex flex-wrap items-center gap-4">
@@ -57,15 +64,31 @@ export function Hero() {
               </Link>
             </Button>
           </div>
-          <div className="flex flex-wrap items-center gap-4 text-foreground/70">
-            <Link href={personal.contact.github} className="hover:text-white transition" target="_blank">
-              <Github className="h-5 w-5" />
+          <nav className="flex flex-wrap items-center gap-4 text-foreground/70" aria-label="Social links">
+            <Link
+              href={personal.contact.github}
+              className="hover:text-white transition"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profile"
+              itemProp="sameAs"
+            >
+              <Github className="h-5 w-5" aria-hidden="true" />
             </Link>
-            <Link href={personal.contact.linkedin} className="hover:text-white transition" target="_blank">
-              <Linkedin className="h-5 w-5" />
+            <Link
+              href={personal.contact.linkedin}
+              className="hover:text-white transition"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+              itemProp="sameAs"
+            >
+              <Linkedin className="h-5 w-5" aria-hidden="true" />
             </Link>
-            <span className="text-sm">Based in {personal.location}</span>
-          </div>
+            <span className="text-sm" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+              Based in <span itemProp="addressLocality">{personal.location}</span>
+            </span>
+          </nav>
           <div className="flex flex-wrap gap-3 text-sm text-foreground/70">
             <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Hack 2 Impact ’25 Winner</span>
             <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">IEEE Xtreme 18.0/19.0</span>

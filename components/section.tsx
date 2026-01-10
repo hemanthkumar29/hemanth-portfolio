@@ -18,9 +18,14 @@ export function Section({ id, eyebrow, title, description, children }: SectionPr
   const contentY = useTransform(scrollYProgress, [0, 1], [0, -30]);
 
   return (
-    <section id={id} ref={ref} className="py-16 sm:py-20">
+    <section
+      id={id}
+      ref={ref}
+      className="py-16 sm:py-20"
+      aria-labelledby={`${id}-title`}
+    >
       <div className="container space-y-10">
-        <motion.div
+        <motion.header
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -29,14 +34,18 @@ export function Section({ id, eyebrow, title, description, children }: SectionPr
           className="max-w-3xl space-y-3"
         >
           {eyebrow ? (
-            <p className="text-sm uppercase tracking-[0.25em] text-foreground/60">{eyebrow}</p>
+            <span className="text-sm uppercase tracking-[0.25em] text-foreground/60" aria-hidden="true">
+              {eyebrow}
+            </span>
           ) : null}
-          <h2 className="text-2xl sm:text-3xl font-bold text-gradient">{title}</h2>
+          <h2 id={`${id}-title`} className="text-2xl sm:text-3xl font-bold text-gradient">
+            {title}
+          </h2>
           {description ? (
             <p className="text-lg text-foreground/75 leading-relaxed">{description}</p>
           ) : null}
-        </motion.div>
-        <motion.div style={{ y: contentY }}>
+        </motion.header>
+        <motion.div style={{ y: contentY }} role="region" aria-label={title}>
           {children}
         </motion.div>
       </div>
