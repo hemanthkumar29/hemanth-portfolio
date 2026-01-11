@@ -44,9 +44,9 @@ export function Hero() {
               </Link>
             </Button>
             <Button asChild variant="ghost" size="lg" className="gap-2">
-              <Link href={personal.resumeUrl} target="_blank">
+              <a href="/api/resume">
                 Download Resume
-              </Link>
+              </a>
             </Button>
           </div>
           <div className="flex flex-wrap items-center gap-4 text-foreground/70">
