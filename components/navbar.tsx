@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { navLinks, personal } from "@/data/portfolio";
 import { Button } from "@/components/ui/button";
 import { Search, Download } from "lucide-react";
@@ -11,22 +10,9 @@ interface NavbarProps {
 }
 
 export default function Navbar({ onCommandOpen }: NavbarProps) {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 12);
-    handler();
-    window.addEventListener("scroll", handler);
-    return () => window.removeEventListener("scroll", handler);
-  }, []);
-
   return (
-    <header
-      className={`sticky top-0 z-40 transition-all duration-300 ${
-        scrolled ? "backdrop-blur-xl bg-background/80 border-b border-white/10" : "bg-transparent"
-      }`}
-    >
-      <div className="container flex items-center justify-between py-4">
+    <header className="fixed inset-x-0 top-0 z-40 bg-transparent">
+      <div className="container flex items-center justify-between py-3">
         <Link href="#hero" className="text-sm font-semibold tracking-wide text-gradient">
           {personal.name}
         </Link>
