@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import dynamic from "next/dynamic";
-const Navbar = dynamic(() => import("@/components/navbar").then((m) => m.Navbar), { ssr: false });
+import Navbar from "@/components/navbar";
 import { CommandPalette } from "@/components/command-palette";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
@@ -42,7 +42,7 @@ export default function Home() {
       >
         Skip to main content
       </a>
-      <Navbar />
+      <Navbar onCommandOpen={() => setCommandOpen(true)} />
       <main id="main-content" role="main" className="space-y-12 sm:space-y-16">
         <Hero />
         <About />

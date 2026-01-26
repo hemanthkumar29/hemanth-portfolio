@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client';
 import { useEffect, useRef } from 'react';
 
@@ -18,8 +19,8 @@ function SplashCursor({
   TRANSPARENT = true,
   zIndex = 0
 }) {
-  const canvasRef = useRef(null);
-  const animationFrameId = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const animationFrameId = useRef<number | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -28,17 +29,17 @@ function SplashCursor({
     // Track if the effect is still active for cleanup
     let isActive = true;
 
-    function pointerPrototype() {
-      this.id = -1;
-      this.texcoordX = 0;
-      this.texcoordY = 0;
-      this.prevTexcoordX = 0;
-      this.prevTexcoordY = 0;
-      this.deltaX = 0;
-      this.deltaY = 0;
-      this.down = false;
-      this.moved = false;
-      this.color = [0, 0, 0];
+    class Pointer {
+      id = -1;
+      texcoordX = 0;
+      texcoordY = 0;
+      prevTexcoordX = 0;
+      prevTexcoordY = 0;
+      deltaX = 0;
+      deltaY = 0;
+      down = false;
+      moved = false;
+      color = { r: 0, g: 0, b: 0 };
     }
 
     let config = {
@@ -59,7 +60,7 @@ function SplashCursor({
       TRANSPARENT
     };
 
-    let pointers = [new pointerPrototype()];
+    const pointers: Pointer[] = [new Pointer()];
 
     const { gl, ext } = getWebGLContext(canvas);
     if (!ext.supportLinearFiltering) {

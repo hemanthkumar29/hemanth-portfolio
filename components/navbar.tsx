@@ -10,7 +10,7 @@ interface NavbarProps {
   onCommandOpen: () => void;
 }
 
-export function Navbar({ onCommandOpen }: NavbarProps) {
+export default function Navbar({ onCommandOpen }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
