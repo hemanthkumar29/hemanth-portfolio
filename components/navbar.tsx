@@ -4,13 +4,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { navLinks, personal } from "@/data/portfolio";
 import { Button } from "@/components/ui/button";
-import { Search, Download } from "lucide-react";
+import { Download } from "lucide-react";
 
 interface NavbarProps {
-  onCommandOpen: () => void;
 }
 
-export default function Navbar({ onCommandOpen }: NavbarProps) {
+export default function Navbar({}: NavbarProps) {
   const [isFixed, setIsFixed] = useState(true);
 
   useEffect(() => {
@@ -20,8 +19,8 @@ export default function Navbar({ onCommandOpen }: NavbarProps) {
         setIsFixed(false);
         return;
       }
-      const heroBottom = window.scrollY + hero.getBoundingClientRect().bottom;
-      setIsFixed(window.scrollY < heroBottom);
+      const heroTop = window.scrollY + hero.getBoundingClientRect().top;
+      setIsFixed(window.scrollY < heroTop);
     };
 
     updatePosition();
@@ -34,7 +33,7 @@ export default function Navbar({ onCommandOpen }: NavbarProps) {
   }, []);
 
   return (
-    <header className={`${isFixed ? "fixed inset-x-0 top-0" : "relative"} z-40 bg-transparent`}>
+    <header className={`${isFixed ? "fixed inset-x-0 top-2" : "relative mt-1"} z-40 bg-transparent`}>
       <div className="container flex items-center justify-between py-3">
         <Link href="#hero" className="text-sm font-semibold tracking-wide text-gradient">
           {personal.name}
@@ -52,11 +51,6 @@ export default function Navbar({ onCommandOpen }: NavbarProps) {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <Button variant="ghost" size="sm" onClick={onCommandOpen} aria-label="Open command palette">
-            <Search className="h-4 w-4" />
-            <span className="hidden sm:inline">Command</span>
-            <span className="hidden sm:inline text-xs text-foreground/60">⌘K</span>
-          </Button>
           <Button
             asChild
             variant="outline"

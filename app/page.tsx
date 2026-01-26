@@ -42,7 +42,7 @@ export default function Home() {
       >
         Skip to main content
       </a>
-      <Navbar onCommandOpen={() => setCommandOpen(true)} />
+      <Navbar />
       <main id="main-content" role="main" className="space-y-12 sm:space-y-16">
         <Hero />
         <About />
