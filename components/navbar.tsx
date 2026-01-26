@@ -7,7 +7,7 @@ import { Download } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <header className="relative z-40 bg-transparent mt-3">
+    <header className="relative z-40 bg-transparent mt-1.5">
       <div className="container flex items-center justify-between py-3">
         <Link href="#hero" className="text-sm font-semibold tracking-wide text-gradient">
           {personal.name}
