@@ -241,7 +241,6 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${poppins.variable} ${jetbrains.variable} bg-background text-foreground antialiased font-sans`}
       >
-        <div className="pointer-events-none fixed inset-0 -z-10 opacity-60 backdrop-grid" />
         {children}
       </body>
     </html>

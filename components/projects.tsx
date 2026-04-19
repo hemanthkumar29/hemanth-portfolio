@@ -2,7 +2,6 @@ import { projects } from "@/data/portfolio";
 import { Section } from "./section";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { Github, ExternalLink } from "lucide-react";
 
@@ -16,27 +15,21 @@ export function Projects() {
     >
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (
-          <motion.div
-            key={project.title}
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.35 }}
-          >
+          <div key={project.title}>
             <Card className="flex h-full flex-col gap-4">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-                  <p className="mt-2 text-foreground/80 leading-relaxed">{project.description}</p>
+                  <h3 className="text-xl font-semibold text-foreground">{project.title}</h3>
+                  <p className="mt-2 leading-relaxed text-slate-600">{project.description}</p>
                 </div>
-                <div className="flex gap-2 text-foreground/60">
+                <div className="flex gap-2 text-slate-500">
                   {project.github ? (
-                    <Link href={project.github} target="_blank" className="hover:text-white">
+                    <Link href={project.github} target="_blank" className="transition-colors hover:text-foreground">
                       <Github className="h-4 w-4" />
                     </Link>
                   ) : null}
                   {project.demo ? (
-                    <Link href={project.demo} target="_blank" className="hover:text-white">
+                    <Link href={project.demo} target="_blank" className="transition-colors hover:text-foreground">
                       <ExternalLink className="h-4 w-4" />
                     </Link>
                   ) : null}
@@ -48,10 +41,10 @@ export function Projects() {
                 ))}
               </div>
               {project.impact ? (
-                <p className="text-sm text-foreground/60">{project.impact}</p>
+                <p className="text-sm text-slate-500">{project.impact}</p>
               ) : null}
             </Card>
-          </motion.div>
+          </div>
         ))}
       </div>
     </Section>

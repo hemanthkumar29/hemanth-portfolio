@@ -7,17 +7,17 @@ import { Download } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <header className="relative z-40 bg-transparent mt-1.5">
+    <header className="fixed inset-x-0 top-0 z-40 border-b border-border bg-white/95 backdrop-blur">
       <div className="container flex items-center justify-between py-3">
-        <Link href="#hero" className="text-sm font-semibold tracking-wide text-gradient">
+        <Link href="#hero" className="text-base font-semibold text-foreground">
           {personal.name}
         </Link>
-        <nav className="hidden items-center gap-6 text-sm text-foreground/80 lg:flex">
+        <nav className="hidden items-center gap-6 text-sm text-slate-600 lg:flex">
           {navLinks.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="transition hover:text-white"
+              className="transition-colors hover:text-foreground"
               scroll={true}
             >
               {item.label}
@@ -31,7 +31,7 @@ export default function Navbar() {
             size="sm"
             className="hidden sm:inline-flex"
           >
-            <a href="/api/resume" className="gap-2">
+            <a href="/api/resume" className="gap-2 text-xs sm:text-sm">
               <Download className="h-4 w-4" /> Resume
             </a>
           </Button>

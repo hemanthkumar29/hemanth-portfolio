@@ -5,8 +5,8 @@ import { Section } from "./section";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import { personal } from "@/data/portfolio";
 
 export function Contact() {
   const [state, setState] = useState<"idle" | "loading" | "success">("idle");
@@ -33,13 +33,9 @@ export function Contact() {
       title="Let’s build something"
       description="Reach out for collaboration, internships, or feedback. I respond quickly."
     >
-      <motion.form
+      <form
         action={handleSubmit}
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.35 }}
-        className="relative grid gap-4 rounded-3xl border border-white/10 bg-card/90 p-6 shadow-soft md:grid-cols-2"
+        className="relative grid gap-4 rounded-xl border border-border bg-white p-6 shadow-soft md:grid-cols-2"
       >
         <div className="space-y-4">
           <Input name="name" placeholder="Name" required />
@@ -52,25 +48,18 @@ export function Contact() {
             <Button type="submit" disabled={state === "loading"}>
               {state === "loading" ? "Sending..." : "Send message"}
             </Button>
-            <AnimatePresence>
-              {state === "success" ? (
-                <motion.div
-                  initial={{ opacity: 0, x: -6 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -6 }}
-                  className="flex items-center gap-2 text-foreground/80"
-                >
-                  <CheckCircle className="h-5 w-5 text-accent" /> Sent!
-                </motion.div>
-              ) : null}
-            </AnimatePresence>
+            {state === "success" ? (
+              <div className="flex items-center gap-2 text-slate-600">
+                <CheckCircle className="h-5 w-5 text-accent" /> Sent!
+              </div>
+            ) : null}
           </div>
-          <p className="text-sm text-foreground/60">
-            Direct line: hemanthkumarhk100@gmail.com. API is wired to /api/contact—configure your
+          <p className="text-sm text-slate-500">
+            Direct line: {personal.contact.email}. API is wired to /api/contact—configure your
             email provider (Resend/EmailJS) before deploying.
           </p>
         </div>
-      </motion.form>
+      </form>
     </Section>
   );
 }

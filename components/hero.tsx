@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { personal } from "@/data/portfolio";
 import Link from "next/link";
@@ -8,33 +5,20 @@ import { ArrowUpRight, Github, Linkedin } from "lucide-react";
 
 export function Hero() {
   return (
-    <section id="hero" className="relative overflow-hidden pb-12 pt-20 sm:pt-28">
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <motion.div
-          className="absolute inset-x-10 top-8 h-64 rounded-full bg-gradient-to-r from-accent/25 via-accent2/20 to-accent/25 blur-[100px]"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        />
-      </div>
-      <div className="container relative flex flex-col gap-12 lg:flex-row lg:items-center">
-        <motion.div
-          className="space-y-6 max-w-2xl"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.65, ease: "easeOut" }}
-        >
-          <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.28em] text-foreground/70">
-            <span className="rounded-full bg-white/5 px-3 py-1">AI • Quantum • Full-stack</span>
-            <span className="text-foreground/60">EEE @ Lendi Institute</span>
+    <section id="hero" className="border-b border-border py-14 sm:py-20">
+      <div className="container grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-center">
+        <div className="max-w-3xl space-y-6">
+          <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em] text-slate-500">
+            <span className="rounded-full border border-border bg-white px-3 py-1">AI • Quantum • Full-stack</span>
+            <span>EEE @ Lendi Institute</span>
           </div>
-          <h1 className="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-            Hi, I’m <span className="text-gradient">{personal.name}</span>
+          <h1 className="text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl">
+            Hi, I&apos;m {personal.name}
           </h1>
-          <p className="text-lg text-foreground/80 sm:text-xl">
+          <p className="text-lg text-slate-700 sm:text-xl">
             {personal.headline}
           </p>
-          <p className="text-foreground/75 leading-relaxed">
+          <p className="leading-relaxed text-slate-600">
             {personal.summary}
           </p>
           <div className="flex flex-wrap items-center gap-4">
@@ -49,56 +33,39 @@ export function Hero() {
               </a>
             </Button>
           </div>
-          <div className="flex flex-wrap items-center gap-4 text-foreground/70">
-            <Link href={personal.contact.github} className="hover:text-white transition" target="_blank">
+          <div className="flex flex-wrap items-center gap-4 text-slate-600">
+            <Link href={personal.contact.github} className="transition-colors hover:text-foreground" target="_blank">
               <Github className="h-5 w-5" />
             </Link>
-            <Link href={personal.contact.linkedin} className="hover:text-white transition" target="_blank">
+            <Link href={personal.contact.linkedin} className="transition-colors hover:text-foreground" target="_blank">
               <Linkedin className="h-5 w-5" />
             </Link>
             <span className="text-sm">Based in {personal.location}</span>
           </div>
-          <div className="flex flex-wrap gap-3 text-sm text-foreground/70">
-            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">Hack 2 Impact ’25 Winner</span>
-            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">IEEE Xtreme 18.0/19.0</span>
-            <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1">SIH Internal Winner ’24/’25</span>
+          <div className="flex flex-wrap gap-3 text-sm text-slate-600">
+            <span className="rounded-full border border-border bg-white px-3 py-1">Hack 2 Impact 2025 Winner</span>
+            <span className="rounded-full border border-border bg-white px-3 py-1">IEEE Xtreme 18.0 / 19.0</span>
+            <span className="rounded-full border border-border bg-white px-3 py-1">SIH Internal Winner 2024 / 2025</span>
           </div>
-        </motion.div>
-        <motion.div
-          className="relative ml-auto flex h-80 w-full max-w-md items-center justify-center"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.65, delay: 0.1, ease: "easeOut" }}
-        >
-          <motion.div
-            className="absolute -left-10 -top-6 h-28 w-28 rounded-full bg-accent/25 blur-3xl"
-            animate={{ y: [0, 8, 0], x: [0, -6, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute -right-12 bottom-0 h-32 w-32 rounded-full bg-accent2/25 blur-3xl"
-            animate={{ y: [0, -10, 0], x: [0, 8, 0] }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <div className="relative h-full w-full overflow-hidden rounded-3xl border border-white/10 bg-card/80 shadow-soft">
-            <div className="absolute inset-0 backdrop-grid opacity-70" />
-            <div className="absolute inset-0 bg-gradient-to-br from-white/6 via-transparent to-white/2" />
-            <div className="absolute right-6 top-6 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs uppercase tracking-[0.25em] text-white/70">
-              EEE • B.Tech
+        </div>
+
+        <div className="rounded-xl border border-border bg-white p-6 shadow-soft">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Quick Profile</p>
+          <div className="mt-5 space-y-5">
+            <div>
+              <p className="text-sm text-slate-500">Focus Areas</p>
+              <p className="mt-1 font-medium text-foreground">AI/ML, Quantum Computing, Backend Systems</p>
             </div>
-            <div className="absolute bottom-6 left-6 space-y-2">
-              <p className="text-sm text-white/70">AI • Quantum • Systems</p>
-              <p className="text-xl font-semibold text-white">Builder & Collaborator</p>
+            <div>
+              <p className="text-sm text-slate-500">Current Goal</p>
+              <p className="mt-1 font-medium text-foreground">Build reliable products and grow through internships</p>
             </div>
-            <motion.div
-              className="absolute inset-0"
-              animate={{ rotate: [0, 2, -2, 0] }}
-              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <div className="absolute inset-10 rounded-2xl border border-white/10" />
-            </motion.div>
+            <div>
+              <p className="text-sm text-slate-500">Based In</p>
+              <p className="mt-1 font-medium text-foreground">{personal.location}</p>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
