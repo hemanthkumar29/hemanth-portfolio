@@ -11,8 +11,8 @@ html {
 }
 
 body {
-  background: #f8fafc;
-  color: #0f172a;
+  background: #fafaf9;
+  color: #1c1917;
   min-height: 100vh;
   font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -23,6 +23,24 @@ h1, h2, h3, h4 {
 }
 
 ::selection {
-  background: #bfdbfe;
-  color: #0f172a;
+  background: #ccfbf1;
+  color: #1c1917;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6d3d1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a29e;
 }

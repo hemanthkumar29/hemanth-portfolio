@@ -14,7 +14,7 @@ export function Section({ id, eyebrow, title, description, children }: SectionPr
       <div className="container space-y-8">
         <header className="max-w-3xl space-y-3">
           {eyebrow ? (
-            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500" aria-hidden="true">
+            <span className="text-xs font-semibold uppercase tracking-[0.18em] text-accent" aria-hidden="true">
               {eyebrow}
             </span>
           ) : null}
@@ -22,7 +22,7 @@ export function Section({ id, eyebrow, title, description, children }: SectionPr
             {title}
           </h2>
           {description ? (
-            <p className="text-base leading-relaxed text-slate-600 sm:text-lg">{description}</p>
+            <p className="text-base leading-relaxed text-stone-500 sm:text-lg">{description}</p>
           ) : null}
         </header>
         <div role="region" aria-label={title}>

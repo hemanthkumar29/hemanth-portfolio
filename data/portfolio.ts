@@ -1,11 +1,11 @@
 export const personal = {
   name: "Hemanth Kumar",
-  headline: "B.Tech EEE • AI, Quantum & Full-stack Engineer",
+  headline: "MERN Stack Developer • DevOps • AI/ML Enthusiast",
   location: "Visakhapatnam",
   summary:
-    "Enthusiastic undergrad blending electrical engineering with software, AI, and quantum computing to build intelligent, reliable systems.",
+    "I build production-grade web applications with the MERN stack, automate infrastructure with modern DevOps practices, and explore the frontiers of AI/ML and Generative AI to create intelligent, scalable systems.",
   story:
-    "Goal-driven builder who learns by shipping. From hackathons to NSS service, I mix analytical thinking with hands-on delivery—spanning quantum-enhanced ML, backend APIs, and smooth web experiences. I document what I learn and look for teams that value speed with rigor.",
+    "Goal-driven full-stack developer who learns by shipping. From hackathons to production deployments, I blend deep JavaScript expertise with DevOps automation and a growing passion for AI/ML—spanning RESTful APIs, containerized microservices, CI/CD pipelines, and LLM-powered applications. I document what I build and look for teams that value speed with quality.",
   contact: {
     email: "hemanthkumarhk100@gmail.com",
     github: "https://github.com/hemanthkumar29",
@@ -16,102 +16,103 @@ export const personal = {
 
 export const skills = [
   {
-    title: "AI, Data & Quantum",
-    items: ["Machine Learning", "NLP basics", "Computer Vision", "TensorFlow", "OpenCV", "Qiskit", "Reinforcement Learning"],
+    title: "MERN Stack",
+    items: ["MongoDB", "Express.js", "React", "Node.js", "Next.js", "REST APIs", "TypeScript"],
   },
   {
-    title: "Backend & Systems",
-    items: ["Node.js", "Express.js", "Flask", "APIs", "Caching & Queues", "Data Structures & Algorithms"],
+    title: "DevOps & Cloud",
+    items: ["Docker", "Kubernetes", "CI/CD", "GitHub Actions", "AWS", "Linux", "Nginx"],
   },
   {
-    title: "Frontend & Mobile",
-    items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Flutter", "UI Systems"],
+    title: "AI & Machine Learning",
+    items: ["Python", "TensorFlow", "PyTorch", "OpenCV", "NLP", "Scikit-learn", "Pandas"],
   },
   {
-    title: "Cloud & DevOps",
-    items: ["Linux", "Git & GitHub", "Firebase", "Google Cloud", "CI/CD", "Docker (basics)"]
+    title: "Generative AI",
+    items: ["LLMs", "Prompt Engineering", "LangChain", "RAG", "OpenAI API", "Hugging Face"],
   },
   {
     title: "Programming Languages",
-    items: ["Python", "C", "C++", "JavaScript", "SQL"]
+    items: ["JavaScript", "TypeScript", "Python", "C++", "SQL"],
   },
   {
-    title: "Tools",
-    items: ["VS Code", "PyCharm", "MongoDB", "Postman", "Google Colab", "Canva"]
+    title: "Tools & Databases",
+    items: ["MongoDB", "PostgreSQL", "Redis", "Git", "VS Code", "Postman", "Docker"],
   },
 ];
 
 export const projects = [
   {
-    title: "Quantum Rush – Hybrid Fraud Detection",
+    title: "SentinelScan — ML-Powered Secret Detector",
     description:
-      "Hybrid quantum-classical pipeline using a 17-qubit variational circuit and actor-critic RL for financial fraud detection.",
-    stack: ["Python", "Qiskit", "Reinforcement Learning", "PaySim Dataset"],
+      "Full-stack credential leak detection system with a React dashboard, FastAPI backend, and BERT-based ML engine that scans codebases for hard-coded secrets using hybrid regex + deep learning.",
+    stack: ["React", "FastAPI", "Python", "BERT", "Docker"],
     github: "",
     demo: "",
-    impact: "Boosted detection accuracy with superposition-based encoding and on-policy updates.",
+    impact: "Achieved high-accuracy detection combining semantic understanding with entropy analysis.",
   },
   {
-    title: "Power Quality Analyzer",
+    title: "DevFlow — CI/CD Pipeline Dashboard",
     description:
-      "ML-based analysis of voltage and current waveforms to classify sag, swell, interruptions, and harmonics.",
-    stack: ["Python", "NumPy", "Pandas", "Scikit-learn", "FFT"],
+      "Real-time MERN dashboard for monitoring GitHub Actions workflows with live status updates, build logs, and deployment metrics across multiple repositories.",
+    stack: ["MongoDB", "Express.js", "React", "Node.js", "Docker", "GitHub API"],
     github: "",
     demo: "",
-    impact: "High detection accuracy using FFT feature extraction on real-world datasets.",
+    impact: "Streamlined DevOps visibility with WebSocket-driven real-time pipeline monitoring.",
   },
   {
-    title: "Conversational Image Recognition Chatbot",
+    title: "AI Study Companion",
     description:
-      "AI chatbot combining CNN-based image understanding with Transformer NLP, served via Flask for web access.",
-    stack: ["Python", "TensorFlow", "OpenCV", "NLP", "Flask"],
+      "Generative AI chatbot built with MERN and LangChain that enables contextual Q&A over uploaded documents using RAG (Retrieval-Augmented Generation).",
+    stack: ["React", "Node.js", "LangChain", "OpenAI", "MongoDB", "Pinecone"],
     github: "",
     demo: "",
-    impact: "Unified vision and language responses with a scalable backend.",
+    impact: "Enabled students to query PDFs and notes with context-aware AI responses.",
   },
   {
-    title: "EEE Hub – Department Resource Website",
+    title: "Smart LED E-Commerce Store",
     description:
-      "Academic hub for EEE students with structured topics, smooth animations, and streamlined navigation.",
-    stack: ["HTML", "CSS", "JavaScript", "Firebase"],
+      "Production e-commerce platform with dynamic product management, admin dashboard, cart persistence via localStorage, and Firebase-backed real-time data.",
+    stack: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
     github: "",
     demo: "",
-    impact: "Improved access to notes and units with organized content delivery.",
+    impact: "Deployed full-featured storefront with admin CRUD and sorted product display.",
   },
 ];
 
 export const experiences = [
   {
-    title: "NSS Volunteer — Lendi Institute",
+    title: "Full-Stack Developer — Freelance",
     timeline: "2024 – Present",
     bullets: [
-      "Drive community welfare initiatives and logistics with student teams.",
-      "Document outcomes and maintain clear stakeholder updates.",
-    ],
-  },
-  {
-    title: "Energy Conservation Club — Lendi Institute",
-    timeline: "2024 – Present",
-    bullets: [
-      "Marketed energy-efficient LED bulbs built by the EEE department.",
-      "Ran awareness drives on sustainable energy practices across campus.",
+      "Build and deploy MERN stack applications for clients with Docker-based containerized workflows.",
+      "Implement CI/CD pipelines using GitHub Actions for automated testing and deployment.",
     ],
   },
   {
     title: "Hackathons & Workshops",
     timeline: "2023 – Present",
     bullets: [
-      "Participated in national/regional hackathons including IEEE Xtreme 18.0/19.0.",
-      "Built prototypes around AI, IoT, and cloud; collaborated with interdisciplinary teams.",
+      "Winner at Hack 2 Impact 2025; participated in IEEE Xtreme 18.0/19.0 and SIH 2024/2025.",
+      "Built prototypes spanning AI, DevOps automation, and full-stack web applications.",
+    ],
+  },
+  {
+    title: "NSS Volunteer — Lendi Institute",
+    timeline: "2024 – Present",
+    bullets: [
+      "Drive community welfare initiatives and coordinate logistics with student teams.",
+      "Document outcomes and maintain clear stakeholder updates across projects.",
     ],
   },
 ];
 
 export const certifications = [
-  "Mastering Data Structures and Algorithms – Udemy",
-  "Introduction to Machine Learning – Coursera",
   "Complete Web Development Bootcamp – Udemy",
-  "Quantum Computing Fundamentals – IBM Qiskit",
+  "MERN Stack Front To Back – Udemy",
+  "Docker & Kubernetes: The Complete Guide – Udemy",
+  "Introduction to Machine Learning – Coursera",
+  "Generative AI with LLMs – DeepLearning.AI",
 ];
 
 export const navLinks = [

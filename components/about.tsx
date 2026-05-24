@@ -6,27 +6,27 @@ export function About() {
     <Section
       id="about"
       eyebrow="About"
-      title="Curiosity-led builder"
+      title="Full-stack builder, DevOps thinker"
       description={personal.story}
     >
-      <div className="grid gap-4 rounded-xl border border-border bg-white p-6 text-slate-700 shadow-soft md:grid-cols-2">
+      <div className="grid gap-4 rounded-xl border border-border bg-white p-6 text-stone-600 shadow-soft transition-all duration-300 hover:shadow-glow md:grid-cols-2">
         <div className="space-y-3">
           <p>
-            I blend electrical engineering with software, AI, and quantum ideas—shipping things to
-            learn faster. I like systems that balance simplicity with rigor and leave behind notes so
-            teams can move together.
+            I specialize in the MERN stack — building everything from RESTful APIs and database
+            architectures to responsive React interfaces. I pair this with DevOps practices like
+            Docker, CI/CD pipelines, and cloud deployments to ship reliably.
           </p>
           <p>
-            Beyond code, I volunteer with NSS, market energy-efficient builds on campus, and bring
-            that collaborative mindset to hackathons.
+            Beyond web development, I&apos;m deeply curious about AI/ML and Generative AI — experimenting
+            with LLMs, RAG architectures, and computer vision to build smarter applications.
           </p>
         </div>
-        <div className="space-y-3 rounded-lg border border-border bg-slate-50 p-4">
-          <p className="text-sm uppercase tracking-[0.18em] text-slate-500">Focus</p>
+        <div className="space-y-3 rounded-lg border border-teal-100 bg-teal-50/50 p-4">
+          <p className="text-sm uppercase tracking-[0.18em] text-stone-500">Focus</p>
           <ul className="space-y-2 text-foreground">
-            <li>Quantum + ML experiments for smarter detection systems</li>
-            <li>Backend craft → clean APIs, data pipelines, testing, and caching</li>
-            <li>Interfaces that feel intentional, responsive, and bold</li>
+            <li>MERN stack apps → MongoDB, Express, React, Node.js, Next.js</li>
+            <li>DevOps craft → Docker, CI/CD, GitHub Actions, cloud infra</li>
+            <li>AI/ML exploration → LLMs, GenAI, computer vision, NLP</li>
           </ul>
         </div>
       </div>

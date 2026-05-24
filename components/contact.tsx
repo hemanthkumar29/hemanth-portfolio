@@ -30,12 +30,12 @@ export function Contact() {
     <Section
       id="contact"
       eyebrow="Contact"
-      title="Let’s build something"
-      description="Reach out for collaboration, internships, or feedback. I respond quickly."
+      title="Let's build something together"
+      description="Reach out for collaboration, internships, or project ideas. I respond quickly."
     >
       <form
         action={handleSubmit}
-        className="relative grid gap-4 rounded-xl border border-border bg-white p-6 shadow-soft md:grid-cols-2"
+        className="relative grid gap-4 rounded-xl border border-border bg-white p-6 shadow-soft transition-all duration-300 hover:shadow-glow md:grid-cols-2"
       >
         <div className="space-y-4">
           <Input name="name" placeholder="Name" required />
@@ -49,14 +49,13 @@ export function Contact() {
               {state === "loading" ? "Sending..." : "Send message"}
             </Button>
             {state === "success" ? (
-              <div className="flex items-center gap-2 text-slate-600">
+              <div className="flex items-center gap-2 text-stone-600">
                 <CheckCircle className="h-5 w-5 text-accent" /> Sent!
               </div>
             ) : null}
           </div>
-          <p className="text-sm text-slate-500">
-            Direct line: {personal.contact.email}. API is wired to /api/contact—configure your
-            email provider (Resend/EmailJS) before deploying.
+          <p className="text-sm text-stone-400">
+            Direct line: {personal.contact.email}
           </p>
         </div>
       </form>

@@ -6,19 +6,19 @@ export function Experience() {
     <Section
       id="experience"
       eyebrow="Experience & Activities"
-      title="Leading, volunteering, and building"
+      title="Building, shipping, and volunteering"
     >
       <div className="grid gap-4 md:grid-cols-2">
         {experiences.map((item) => (
           <article
             key={item.title}
-            className="rounded-xl border border-border bg-white p-5 shadow-soft"
+            className="rounded-xl border border-border bg-white p-5 shadow-soft transition-all duration-200 hover:shadow-glow hover:border-teal-200"
           >
             <div className="flex items-center justify-between">
               <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
-              <span className="text-xs uppercase tracking-[0.12em] text-slate-500">{item.timeline}</span>
+              <span className="text-xs uppercase tracking-[0.12em] text-stone-400">{item.timeline}</span>
             </div>
-            <ul className="mt-3 space-y-2 text-slate-600">
+            <ul className="mt-3 space-y-2 text-stone-500">
               {item.bullets.map((bullet) => (
                 <li key={bullet} className="leading-relaxed">
                   {bullet}

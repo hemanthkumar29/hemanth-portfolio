@@ -7,17 +7,17 @@ import { Download } from "lucide-react";
 
 export default function Navbar() {
   return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-border bg-white/95 backdrop-blur">
+    <header className="fixed inset-x-0 top-0 z-40 border-b border-border bg-background/90 backdrop-blur-md">
       <div className="container flex items-center justify-between py-3">
         <Link href="#hero" className="text-base font-semibold text-foreground">
           {personal.name}
         </Link>
-        <nav className="hidden items-center gap-6 text-sm text-slate-600 lg:flex">
+        <nav className="hidden items-center gap-6 text-sm text-stone-500 lg:flex">
           {navLinks.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="transition-colors hover:text-foreground"
+              className="transition-colors hover:text-accent"
               scroll={true}
             >
               {item.label}
