@@ -19,7 +19,7 @@ const siteConfig = {
   title: "Hemanth Kumar | MERN Stack Developer, DevOps & AI/ML Portfolio",
   description:
     "Portfolio of Hemanth Kumar — MERN Stack Developer specializing in full-stack web applications, DevOps automation, and AI/ML & Generative AI. View projects in React, Node.js, Docker, and machine learning.",
-  url: "https://hemanth.dev",
+  url: "https://hemanthkumar.dev",
   ogImage: "/og.jpg",
   links: {
     github: "https://github.com/hemanthkumar29",
@@ -29,8 +29,8 @@ const siteConfig = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fafaf9" },
-    { media: "(prefers-color-scheme: dark)", color: "#1c1917" },
+    { media: "(prefers-color-scheme: light)", color: "#0a0a0f" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0f" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -155,10 +155,10 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://hemanth.dev/#person",
+        "@id": "https://hemanthkumar.dev/#person",
         name: "Hemanth Kumar",
-        url: "https://hemanth.dev",
-        image: "https://hemanth.dev/og.jpg",
+        url: "https://hemanthkumar.dev",
+        image: "https://hemanthkumar.dev/og.jpg",
         sameAs: [
           "https://github.com/hemanthkumar29",
           "https://www.linkedin.com/in/hemanthkumar-ch/",
@@ -193,26 +193,26 @@ export default function RootLayout({
       },
       {
         "@type": "WebSite",
-        "@id": "https://hemanth.dev/#website",
-        url: "https://hemanth.dev",
+        "@id": "https://hemanthkumar.dev/#website",
+        url: "https://hemanthkumar.dev",
         name: "Hemanth Kumar Portfolio",
         description:
           "Portfolio of Hemanth Kumar featuring projects in MERN Stack, DevOps, and AI/ML",
         publisher: {
-          "@id": "https://hemanth.dev/#person",
+          "@id": "https://hemanthkumar.dev/#person",
         },
         inLanguage: "en-US",
       },
       {
         "@type": "WebPage",
-        "@id": "https://hemanth.dev/#webpage",
-        url: "https://hemanth.dev",
+        "@id": "https://hemanthkumar.dev/#webpage",
+        url: "https://hemanthkumar.dev",
         name: "Hemanth Kumar | MERN Stack Developer, DevOps & AI/ML Portfolio",
         isPartOf: {
-          "@id": "https://hemanth.dev/#website",
+          "@id": "https://hemanthkumar.dev/#website",
         },
         about: {
-          "@id": "https://hemanth.dev/#person",
+          "@id": "https://hemanthkumar.dev/#person",
         },
         description:
           "Explore Hemanth Kumar's portfolio showcasing projects in MERN Stack development, DevOps automation, and AI/ML & Generative AI.",
@@ -220,35 +220,37 @@ export default function RootLayout({
         potentialAction: [
           {
             "@type": "ReadAction",
-            target: ["https://hemanth.dev"],
+            target: ["https://hemanthkumar.dev"],
           },
         ],
       },
       {
         "@type": "ProfilePage",
         dateCreated: "2024-01-01T00:00:00+00:00",
-        dateModified: new Date().toISOString(),
+        dateModified: "2025-05-24T00:00:00+00:00",
         mainEntity: {
-          "@id": "https://hemanth.dev/#person",
+          "@id": "https://hemanthkumar.dev/#person",
         },
       },
     ],
   };
 
   return (
-    <html lang="en" dir="ltr">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+    <html lang="en" dir="ltr" suppressHydrationWarning>
+      <head suppressHydrationWarning>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
       </head>
       <body
         className={`${inter.variable} ${poppins.variable} ${jetbrains.variable} bg-background text-foreground antialiased font-sans`}
+        suppressHydrationWarning
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          suppressHydrationWarning
+        />
         {children}
       </body>
     </html>

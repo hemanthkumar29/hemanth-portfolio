@@ -18,7 +18,7 @@ export default function Home() {
         Skip to main content
       </a>
       <Navbar />
-      <main id="main-content" role="main" className="space-y-12 sm:space-y-16">
+      <main id="main-content" role="main">
         <Hero />
         <About />
         <Skills />
