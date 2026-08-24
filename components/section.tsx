@@ -9,9 +9,10 @@ interface SectionProps {
   title: string;
   description?: string;
   children: ReactNode;
+  className?: string;
 }
 
-export function Section({ id, eyebrow, title, description, children }: SectionProps) {
+export function Section({ id, eyebrow, title, description, children, className }: SectionProps) {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -19,7 +20,7 @@ export function Section({ id, eyebrow, title, description, children }: SectionPr
     <section
       id={id}
       ref={ref}
-      className="py-16 sm:py-24"
+      className={`py-16 sm:py-24 ${className ?? ""}`}
       aria-labelledby={`${id}-title`}
     >
       <div className="container space-y-10">
@@ -39,12 +40,12 @@ export function Section({ id, eyebrow, title, description, children }: SectionPr
           ) : null}
           <h2
             id={`${id}-title`}
-            className="text-3xl font-bold text-white sm:text-4xl"
+            className="text-3xl font-bold text-foreground sm:text-4xl"
           >
             {title}
           </h2>
           {description ? (
-            <p className="text-base leading-relaxed text-zinc-400 sm:text-lg">
+            <p className="text-base leading-relaxed text-muted sm:text-lg">
               {description}
             </p>
           ) : null}

@@ -1,12 +1,16 @@
 import Navbar from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
-import { Skills } from "@/components/skills";
 import { Projects } from "@/components/projects";
+import { Skills } from "@/components/skills";
 import { Experience } from "@/components/experience";
 import { Certifications } from "@/components/certifications";
+import { DSAJourney } from "@/components/dsa-journey";
+import { CurrentlyLearning } from "@/components/currently-learning";
+import { LearningLab } from "@/components/learning-lab";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { ScrollProgress } from "@/components/scroll-progress";
 
 export default function Home() {
   return (
@@ -17,14 +21,18 @@ export default function Home() {
       >
         Skip to main content
       </a>
+      <ScrollProgress />
       <Navbar />
       <main id="main-content" role="main">
         <Hero />
         <About />
-        <Skills />
         <Projects />
+        <Skills />
         <Experience />
         <Certifications />
+        <DSAJourney />
+        <CurrentlyLearning />
+        <LearningLab />
         <Contact />
       </main>
       <Footer />
